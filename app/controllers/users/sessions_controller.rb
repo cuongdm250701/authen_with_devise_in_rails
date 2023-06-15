@@ -11,7 +11,8 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    binding.pry
+    # devise sẽ xử lý ngầm việc lấy params từ form
+    # binding.pry
     super
   end
 
@@ -25,7 +26,7 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   def after_sign_out_path_for(resource_name)
-    new_user_registration_path
+    signin_path
   end
 
   # protected
