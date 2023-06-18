@@ -10,7 +10,7 @@ class User < ApplicationRecord
   # khi gọi warden.authenticate!(auth_options) method này được sử dụng
   # warden_condition sẽ chứa các thông tin được gửi từ form
   def self.find_for_database_authentication warden_condition
-    binding.pry
+    # binding.pry
     # sử dung dup để clone ra bản khác tránh làm ảnh hưởng đến phần tử gốc
     conditions = warden_condition.dup
     # nếu không dùng delete mà dùng dig thì sẽ gây lỗi ở câu điều kiện where
